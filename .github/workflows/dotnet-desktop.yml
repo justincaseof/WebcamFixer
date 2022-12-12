@@ -31,5 +31,5 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v3
         with: 
-          name: buildresult
-          path: bin/Debug/netcoreapp3.1/publish/*
+          name: buildresult-release
+          path: bin/Release/netcoreapp3.1/publish/*
