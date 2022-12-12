@@ -28,8 +28,13 @@ jobs:
 #        run: dotnet test --no-restore --verbosity normal
       - name: Publish
         run: dotnet publish
-      - name: Upload
+      - name: Upload-Debug
         uses: actions/upload-artifact@v3
         with: 
           name: buildresult-release
-          path: bin/Release/netcoreapp3.1/publish/*
+          path: bin/Debug/netcoreapp3.1/publish/*
+      - name: Upload-Release
+        uses: actions/upload-artifact@v3
+        with: 
+          name: buildresult-release
+          path: WebcamFixer/bin/Release/netcoreapp3.1/*
